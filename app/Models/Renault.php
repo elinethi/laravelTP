@@ -18,7 +18,5 @@ class Renault extends Voiture
         return $this->Marque;
     }
 
-    public function getTexte() {
-        return $this->getMarque()." ".$this->getModele()." ".get_class($this);
-    }
+
 }

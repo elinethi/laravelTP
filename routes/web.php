@@ -43,3 +43,6 @@ Route::get('/command', function () {
 
 //Exercice 9 : Composite
 Route::get('/composite', 'App\Http\Controllers\CompositeController@go');
+
+//Exercice 10 : Chain Of Responsability
+Route::get('/chain', 'App\Http\Controllers\ChainController@go');

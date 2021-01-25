@@ -5,27 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Iterator;
+use SebastianBergmann\CodeCoverage\Node\Iterator as NodeIterator;
 
-class ListeNom extends Model
+class ListeNom
 {
-    protected $nom = array('Eline', 'Ambre', 'Glenn', 'Elouan', 'Corentin', 'Romain');
+    protected $lIterateur;
+    public function createIterator()
+    {
+        return $this->lIterateur = new Iterateur(array('Eline', 'Ambre', 'Glenn', 'Elouan', 'Corentin', 'Romain'));
+    }
 
     public function getIterator(){
-        return $this->nom;
+        return $this->lIterateur->getNom();
     }
 
-    public function hasNext($i){
-        if($i < Count($this->nom)) {
-            return true;
-        }
-        return false;
-    }
-
-    public function next($i) {
-     
-        if($this->hasNext($i)){
-           return $this->nom[$i++];
-        }
-        return null;
-     }		
 }

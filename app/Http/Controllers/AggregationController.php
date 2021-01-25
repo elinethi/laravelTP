@@ -9,7 +9,8 @@ class AggregationController extends Controller
 {
     function go() {
 
-        $listeNom = new ListeNom();
+        $listeNom = new listeNom;
+        $listeNom->createIterator();
 
         return view('aggregation',["liste"=>$listeNom->getIterator()]);
     }

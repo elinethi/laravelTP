@@ -9,9 +9,9 @@
 @stop
 
 @section('contenu')
-    <p>Voiture 1 : {{ $a->getModele() }} {{ $a->getCouleur() }} Prix : {{ $a->getPrix() }} Class : {{ get_class($a)}}</p>
-    <p>Voiture 2 : {{ $b->getModele() }} {{ $b->getCouleur() }} Prix : {{ $b->getPrix() }} Class : {{ get_class($b)}}</p>
-    <p>{{ $c->getNom() }}: {{ $c->getVoitures() }}</p>
-    <p>Facture {{ $d->getNumero() }} au prix de {{ $d->getPrix() }} pour la voiture {{ get_class($d->getVoiture()) }}</p>
-    <p>Facture {{ $e->getNumero() }} au prix de {{ $e->getPrix() }} pour la voiture {{ get_class($e->getVoiture()) }}</p>
+    <p>Voiture 1 : {{ $facade->voiture1->getModele() }} {{ $facade->voiture1->getCouleur() }} Prix : {{ $facade->voiture1->getPrix() }} Class : {{ get_class($facade->voiture1)}}</p>
+    <p>Voiture 2 : {{ $facade->voiture2->getModele() }} {{ $facade->voiture2->getCouleur() }} Prix : {{ $facade->voiture2->getPrix() }} Class : {{ get_class($facade->voiture2)}}</p>
+    <p>{{ $facade->concession->getNom() }}: {{ $facade->concession->getVoitures() }}</p>
+    <p>Facture {{ $facade->facture1->getNumero() }} au prix de {{ $facade->facture1->getPrix() }} pour la voiture {{ get_class($facade->facture1->getVoiture()) }}</p>
+    <p>Facture {{ $facade->facture2->getNumero() }} au prix de {{ $facade->facture2->getPrix() }} pour la voiture {{ get_class($facade->facture2->getVoiture()) }}</p>
 @stop

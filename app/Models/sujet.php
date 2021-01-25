@@ -13,9 +13,18 @@ class sujet
     public function __construct($leTexte)
     {
         $this->texte = $leTexte;
-        array_push($this->lesObservateurs, new observateur, new observateur);
     }
 
+    public function addObserveur($observateur)
+    {
+        array_push($this->lesObservateurs, $observateur);
+    }
+
+    public function suppObserveur($observateur)
+    {
+        unset($this->lesObservateurs[array_search($observateur, $this->lesObservateurs)]);
+    }
+    
     public function update($newTexte)
     {
         $this->texte = $newTexte;

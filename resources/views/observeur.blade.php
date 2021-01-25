@@ -37,5 +37,14 @@ Observeur
         $i++;
     }
     ?>
+    <em>Suppression d'un observeur</em>
+    <?php
+    $sujet->suppObserveur($observeur1);
+    $i = 1;
+    foreach($sujet->getObservateur() as $observ){
+        echo "<p> Observateur n°".$i." : ".$observ->display()."</p>";
+        $i++;
+    }
+    ?>
     
 @stop

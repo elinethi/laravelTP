@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-abstract class Voiture
+class Voiture
 {
     protected $Modele;
     protected $Couleur;
@@ -23,6 +23,8 @@ abstract class Voiture
         return $this->Couleur;
     } 
 
-    public abstract function getTexte();
+    public function getTexte() {
+        return $this->getModele()." ".get_class($this);
+    }
     
 }

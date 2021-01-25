@@ -5,7 +5,7 @@
 @stop
 
 @section('titre2')
-  Bienvenue sur mon TP 
+  Bienvenue sur mon TP
 @stop
 
 @section('contenu')
@@ -19,5 +19,6 @@
     <li>Exercice 7 : /template</li>
     <li>Exercice 8 : /command</li>
     <li>Exercice 9 : /composite</li>
+    <li>Exercice 10 : /chain</li>
   </ul>
 @stop
