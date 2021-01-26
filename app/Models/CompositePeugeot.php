@@ -7,19 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class CompositePeugeot extends Composite
 {
-    protected $prix;
     protected static $lesPeugeot = array();
-    public function __construct(int $lePrix)
+
+    public function __construct() {
+    }
+    public function addChild($leChild)
     {
-        $this->prix = $lePrix;
-        array_push(CompositePeugeot::$lesPeugeot,$this);
+        array_push(CompositePeugeot::$lesPeugeot,$leChild);
     }
 
     public function getPrixTotal(){
         $prixTot = 0;
         foreach (CompositePeugeot::$lesPeugeot as $voiture)
         {
-            $prixTot+=$voiture->prix;
+            $prixTot+=$voiture->getPrixTotal();
         }
         return $prixTot;
     }

@@ -20,5 +20,6 @@
     <li>Exercice 8 : /command</li>
     <li>Exercice 9 : /composite</li>
     <li>Exercice 10 : /chain</li>
+    <li>Exercice 11 : /state</li>
   </ul>
 @stop

@@ -18,4 +18,5 @@ class CompositeLaRenault extends Composite
         return $this->prix;
     }
 
+
 }
